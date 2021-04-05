@@ -26,4 +26,10 @@
     <string name="info_farm_phone">Рақами телефон:</string>
     <string name="input_tint">Ворид намоед</string>
     <string name="button_dialog">Бақайд гирифтан</string>
+    <string name="btn_inp_1">Қитъа</string>
+    <string name="btn_inp_2">Сана</string>
+    <string name="btn_inp_3">Фаъолият</string>
+    <string name="btn_inp_4">Иҷрокунанда</string>
+    <string name="btn_inp_5">Шахси масъул</string>
+    <string name="btn_inp_6">Хароҷот</string>
 </resources>
