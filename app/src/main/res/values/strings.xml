@@ -4,6 +4,7 @@
     <string name="contacts_title_name">Тамос</string>
     <string name="info_title_name">Маълумот</string>
     <string name="reports_title_name">Ҳисобот</string>
+    <string name="one_time_dialog_title_name">Маълумот дар бораи хоҷагии деҳқонӣ</string>
     <string name="btn_1_name">Корҳои механикӣ</string>
     <string name="btn_2_name">Корҳои механикӣ</string>
     <string name="btn_3_name">Корҳои механикӣ</string>
@@ -19,4 +20,10 @@
     <string name="btn_13_name">Корҳои механикӣ</string>
     <string name="btn_14_name">Корҳои механикӣ</string>
     <string name="btn_15_name">Корҳои механикӣ</string>
+    <string name="info_farm_name">Номи хоҷагии деҳқонӣ:</string>
+    <string name="info_farm_owner">Раиси хоҷагии деҳқонӣ:</string>
+    <string name="info_farm_area">Масоҳати хоҷагии деҳқонӣ:</string>
+    <string name="info_farm_phone">Рақами телефон:</string>
+    <string name="input_tint">Ворид намоед</string>
+    <string name="button_dialog">Бақайд гирифтан</string>
 </resources>

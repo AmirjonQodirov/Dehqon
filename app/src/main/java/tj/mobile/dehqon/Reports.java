@@ -16,8 +16,6 @@ public class Reports extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reports);
 
-
-
         BottomNavigationView bnv = findViewById(R.id.bottom_nav);
         bnv.setSelectedItemId(R.id.reports);
 

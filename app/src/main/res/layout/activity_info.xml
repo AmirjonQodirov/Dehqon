@@ -20,11 +20,10 @@
             android:src="@drawable/logo_blue"
             />
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/contacts_title_name"
+            android:text="@string/info_title_name"
             android:layout_centerInParent="true"
             android:textColor="@color/white"
             android:textStyle="normal"
@@ -44,114 +43,107 @@
         android:layout_above="@+id/bottom_nav"
         android:background="@drawable/shape_main_page"
         >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:weightSum="6"
-            >
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:onClick="phone_contact"
-                android:weightSum="3"
-                android:orientation="horizontal" >
-                <ImageView
-                    android:id="@+id/contacts_page_phone"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_call"
-                    android:layout_weight="1"
-                    />
-                <TextView
-                    android:textColor="@color/black"
-                    android:width="0dp"
-                    android:layout_weight="2"
-                    android:textSize="18sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Телефон: \n +992 92 771 71 68"/>
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:weightSum="3"
-                android:onClick="mail_contact"
-                android:orientation="horizontal" >
-                <ImageView
-                    android:id="@+id/contacts_page_mail"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_mail"
-                    android:layout_weight="1"
-                    />
-                <TextView
-                    android:textColor="@color/black"
-                    android:width="0dp"
-                    android:layout_weight="2"
-                    android:textSize="18sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Суроғаи электорнӣ: \n info@qmc.tj"/>
+        <TextView
+            android:id="@+id/farm_name_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info_farm_name"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/farm_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/farm_name_view"
+            />
 
-            </LinearLayout>
+        <TextView
+            android:id="@+id/farm_owner_view"
+            android:layout_below="@+id/farm_name"
+            android:text="@string/info_farm_owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/farm_owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/farm_owner_view"
+            />
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:weightSum="3"
-                android:orientation="horizontal" >
-                <ImageView
-                    android:id="@+id/contacts_page_location"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_location"
-                    android:layout_weight="1"
-                    />
-                <TextView
-                    android:textColor="@color/black"
-                    android:width="0dp"
-                    android:layout_weight="2"
-                    android:textSize="18sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Суроға: \nшаҳри Хуҷанд, \nХиёбони Исмоил Сомонӣ \n183а"/>
+        <TextView
+            android:id="@+id/farm_area_view"
+            android:layout_below="@+id/farm_owner"
+            android:text="@string/info_farm_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/farm_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/farm_area_view"
+            />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:weightSum="3"
-                android:onClick="web_contact"
-                android:orientation="horizontal" >
-                <ImageView
-                    android:id="@+id/contacts_page_web"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_web"
-                    android:layout_weight="1"
-                    />
-                <TextView
-                    android:textColor="@color/black"
-                    android:width="0dp"
-                    android:layout_weight="2"
-                    android:textSize="18sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="www.qmc.tj"/>
-            </LinearLayout>
-        </LinearLayout>
+        <TextView
+            android:id="@+id/farm_phone_view"
+            android:layout_below="@+id/farm_area"
+            android:text="@string/info_farm_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/farm_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/farm_phone_view"
+            />
     </RelativeLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
