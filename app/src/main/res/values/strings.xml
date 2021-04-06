@@ -26,10 +26,119 @@
     <string name="info_farm_phone">Рақами телефон:</string>
     <string name="input_tint">Ворид намоед</string>
     <string name="button_dialog">Бақайд гирифтан</string>
+
     <string name="btn_inp_1">Қитъа</string>
     <string name="btn_inp_2">Сана</string>
     <string name="btn_inp_3">Фаъолият</string>
     <string name="btn_inp_4">Иҷрокунанда</string>
     <string name="btn_inp_5">Шахси масъул</string>
     <string name="btn_inp_6">Хароҷот</string>
+
+    <string name="btn_inp_1_t2">Қитъа</string>
+    <string name="btn_inp_2_t2">Сана</string>
+    <string name="btn_inp_3_t2">Номи нурӣ</string>
+    <string name="btn_inp_4_t2">Моддаи активӣ</string>
+    <string name="btn_inp_5_t2">Миқдор</string>
+    <string name="btn_inp_6_t2">Консентрасия</string>
+    <string name="btn_inp_7_t2">Метод</string>
+    <string name="btn_inp_8_t2">Иҷрокунанда</string>
+    <string name="btn_inp_9_t2">Шахси масъул</string>
+    <string name="btn_inp_10_t2">Хароҷот</string>
+
+    <string name="btn_inp_1_t3">Қитъа</string>
+    <string name="btn_inp_2_t3">Сана</string>
+    <string name="btn_inp_3_t3">Миқдор</string>
+    <string name="btn_inp_4_t3">Метод</string>
+    <string name="btn_inp_5_t3">Муддат</string>
+    <string name="btn_inp_6_t3">Иҷрокунанда</string>
+    <string name="btn_inp_7_t3">Шахси масъул</string>
+    <string name="btn_inp_8_t3">Хароҷот</string>
+
+    <string name="btn_inp_1_t4">Қитъа</string>
+    <string name="btn_inp_2_t4">Сана</string>
+    <string name="btn_inp_3_t4">Номи касали</string>
+    <string name="btn_inp_4_t4">Номи захрхимикат</string>
+    <string name="btn_inp_5_t4">Моддаи фаъол</string>
+    <string name="btn_inp_6_t4">Миқдори захрхимикат</string>
+    <string name="btn_inp_7_t4">Миқдори омехтакунӣ</string>
+    <string name="btn_inp_8_t4">Метод ва номи таҷҳизот</string>
+    <string name="btn_inp_9_t4">Боду ҳаво, ҳарорат ва самти шамол</string>
+    <string name="btn_inp_10_t4">Иҷрокунанда</string>
+    <string name="btn_inp_11_t4">Шахси масъул</string>
+    <string name="btn_inp_12_t4">Санаи боздошт</string>
+    <string name="btn_inp_13_t4">Хароҷот</string>
+
+    <string name="btn_inp_1_t5">Қитъа</string>
+    <string name="btn_inp_2_t5">Сана</string>
+    <string name="btn_inp_3_t5">Иҷрокунанда</string>
+    <string name="btn_inp_4_t5">Миқдор</string>
+    <string name="btn_inp_5_t5">Сифат ва сорт</string>
+    <string name="btn_inp_6_t5">Шахси масъул</string>
+    <string name="btn_inp_7_t5">Харидор ва рақами мобилии он</string>
+    <string name="btn_inp_8_t5">Хароҷот</string>
+
+    <string name="btn_inp_1_t6">Санаи муайянкуни</string>
+    <string name="btn_inp_2_t6">Хатогӣ</string>
+    <string name="btn_inp_3_t6">Корӽои ислоӽотӣ</string>
+    <string name="btn_inp_4_t6">Санаи маӽкамкунӣ</string>
+    <string name="btn_inp_5_t6">Шахси масъул</string>
+    <string name="btn_inp_6_t6">Имзо</string>
+    <string name="btn_inp_7_t6">Хароҷот</string>
+
+    <string name="btn_inp_1_t7">Сана</string>
+    <string name="btn_inp_2_t7">Мавзуъ</string>
+    <string name="btn_inp_3_t7">Шунаванда</string>
+    <string name="btn_inp_4_t7">Вазифа</string>
+    <string name="btn_inp_5_t7">Имзои Шунаванда</string>
+    <string name="btn_inp_6_t7">Омузгор</string>
+    <string name="btn_inp_7_t7">Имзои омузгор</string>
+    <string name="btn_inp_8_t7">Хароҷот</string>
+
+    <string name="btn_inp_1_t8">Сана</string>
+    <string name="btn_inp_2_t8">Шикояткунанда</string>
+    <string name="btn_inp_3_t8">Маълумот</string>
+    <string name="btn_inp_4_t8">Шикоят</string>
+    <string name="btn_inp_5_t8">Чораӽои андешидашуда</string>
+    <string name="btn_inp_6_t8">Шахси масъул</string>
+
+    <string name="btn_inp_1_t9">Сана</string>
+    <string name="btn_inp_2_t9">Партия</string>
+    <string name="btn_inp_3_t9">Номи маӽсулот</string>
+    <string name="btn_inp_4_t9">Аз куҷо</string>
+    <string name="btn_inp_5_t9">Сабаб</string>
+    <string name="btn_inp_6_t9">Шахси масъул</string>
+    <string name="btn_inp_7_t9">Хароҷот</string>
+
+    <string name="btn_inp_1_t10">Санаи харид</string>
+    <string name="btn_inp_2_t10">Номи заӽрхимикат</string>
+    <string name="btn_inp_3_t10">Ӽуҷҷатӽои тасдиқкунанда</string>
+    <string name="btn_inp_4_t10">Санаи сарфкуни</string>
+    <string name="btn_inp_5_t10">Миқдор</string>
+    <string name="btn_inp_6_t10">Шахси масъул</string>
+
+    <string name="btn_inp_1_t11">Санаи харид</string>
+    <string name="btn_inp_2_t11">Номи нурӣ</string>
+    <string name="btn_inp_3_t11">Ӽуҷҷатӽои тасдиқкунанда</string>
+    <string name="btn_inp_4_t11">Санаи истифодабари</string>
+    <string name="btn_inp_5_t11">Миқдор</string>
+    <string name="btn_inp_6_t11">Шахси масъул</string>
+
+    <string name="btn_inp_1_t12">Сана</string>
+    <string name="btn_inp_2_t12">Маӽсулот</string>
+    <string name="btn_inp_3_t12">Миқдор</string>
+    <string name="btn_inp_4_t12">Фаъолият</string>
+    <string name="btn_inp_5_t12">Консервант</string>
+    <string name="btn_inp_6_t12">Миқдори консервант</string>
+    <string name="btn_inp_7_t12">Вақти саршавӣ</string>
+    <string name="btn_inp_8_t12">Вақти охир</string>
+    <string name="btn_inp_9_t12">Шахси масъул</string>
+    <string name="btn_inp_10_t12">Хароҷот</string>
+
+    <string name="btn_inp_1_t13">Сана</string>
+    <string name="btn_inp_2_t13">Тозза намудани либоси махсуси муҳофизатӣ</string>
+    <string name="btn_inp_3_t13">Ному насаби коргар</string>
+    <string name="btn_inp_4_t13">Имзо</string>
+    <string name="btn_inp_5_t13">Ному насаби шахси масъул</string>
+    <string name="btn_inp_6_t13">Имзо</string>
+
 </resources>
