@@ -9,74 +9,83 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dehqon.NoAction">
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".buttons.Button15"
             android:label="@string/btn_15_name"
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.Dehqon" />
-        <activity android:name=".buttons.Button14"
+        <activity
+            android:name=".buttons.Button14"
             android:label="@string/btn_14_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"
-            />
-        <activity android:name=".buttons.Button13"
+            android:theme="@style/Theme.Dehqon" />
+        <activity
+            android:name=".buttons.Button13"
             android:label="@string/btn_13_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"/>
-        <activity android:name=".buttons.Button12"
+            android:theme="@style/Theme.Dehqon" />
+        <activity
+            android:name=".buttons.Button12"
             android:label="@string/btn_12_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"
-            />
-        <activity android:name=".buttons.Button11"
+            android:theme="@style/Theme.Dehqon" />
+        <activity
+            android:name=".buttons.Button11"
             android:label="@string/btn_11_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"
-            />
-        <activity android:name=".buttons.Button10"
+            android:theme="@style/Theme.Dehqon" />
+        <activity
+            android:name=".buttons.Button10"
             android:label="@string/btn_10_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"
-            />
-        <activity android:name=".buttons.Button9"
+            android:theme="@style/Theme.Dehqon" />
+        <activity
+            android:name=".buttons.Button9"
             android:label="@string/btn_9_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"
-            />
-        <activity android:name=".buttons.Button8"
+            android:theme="@style/Theme.Dehqon" />
+        <activity
+            android:name=".buttons.Button8"
             android:label="@string/btn_8_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"
-            />
-        <activity android:name=".buttons.Button7"
+            android:theme="@style/Theme.Dehqon" />
+        <activity
+            android:name=".buttons.Button7"
             android:label="@string/btn_7_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"
-            />
-        <activity android:name=".buttons.Button6"
+            android:theme="@style/Theme.Dehqon" />
+        <activity
+            android:name=".buttons.Button6"
             android:label="@string/btn_6_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"
-            />
-        <activity android:name=".buttons.Button5"
+            android:theme="@style/Theme.Dehqon" />
+        <activity
+            android:name=".buttons.Button5"
             android:label="@string/btn_5_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"
-            />
-        <activity android:name=".buttons.Button4"
+            android:theme="@style/Theme.Dehqon" />
+        <activity
+            android:name=".buttons.Button4"
             android:label="@string/btn_4_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"/>
-        <activity android:name=".buttons.Button3"
+            android:theme="@style/Theme.Dehqon" />
+        <activity
+            android:name=".buttons.Button3"
             android:label="@string/btn_3_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"
-            />
-        <activity android:name=".buttons.Button2"
+            android:theme="@style/Theme.Dehqon" />
+        <activity
+            android:name=".buttons.Button2"
             android:label="@string/btn_2_name"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Dehqon"
-            />
+            android:theme="@style/Theme.Dehqon" />
         <activity
             android:name=".buttons.Button1"
             android:label="@string/btn_1_name"
@@ -87,11 +96,7 @@
         <activity android:name=".Contacts" />
         <activity android:name=".Info" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

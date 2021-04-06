@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Reports"
     android:background="@color/main_green"
-    >
+    tools:context=".Reports">
 
     <RelativeLayout
         android:id="@+id/header"
@@ -17,20 +16,18 @@
             android:id="@+id/logo_blue"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:src="@drawable/logo_blue"
-            />
+            android:src="@drawable/logo_blue" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/reports_title_name"
             android:layout_centerInParent="true"
-            android:textColor="@color/white"
-            android:textStyle="normal"
-            android:textSize="24sp"
             android:gravity="center_horizontal"
-            />
+            android:text="@string/reports_title_name"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="normal" />
 
 
     </RelativeLayout>
@@ -38,26 +35,23 @@
 
     <RelativeLayout
         android:id="@+id/content"
-        android:layout_below="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bottom_nav"
-        android:background="@drawable/shape_main_page"
-        >
-
-
+        android:layout_below="@+id/header"
+        android:background="@drawable/shape_main_page">
 
 
     </RelativeLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottom_nav"
-        app:itemBackground="@color/white"
-        app:itemTextColor="@drawable/selector"
-        app:itemIconTint="@drawable/selector"
-        app:menu="@menu/menu_navigation"
         android:layout_alignParentBottom="true"
-        />
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
 
 </RelativeLayout>

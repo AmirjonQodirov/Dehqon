@@ -164,9 +164,9 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String TABLE_15_row1 = "дата";
     public static final String TABLE_15_row2 = "проведение_чистки_защитной_спецодежды ";
     public static final String TABLE_15_row3 = "фио_оператора";
-    public static final String TABLE_15_row4 = "подпись";
+    public static final String TABLE_15_row4 = "подпись_опер";
     public static final String TABLE_15_row5 = "фио_овт_лица";
-    public static final String TABLE_15_row6 = "подпись";
+    public static final String TABLE_15_row6 = "подпись_отв_лица";
 
     public DBHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

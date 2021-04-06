@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Info"
     android:background="@color/main_green"
-    >
+    tools:context=".Info">
 
     <RelativeLayout
         android:id="@+id/header"
@@ -17,19 +16,17 @@
             android:id="@+id/logo_blue"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:src="@drawable/logo_blue"
-            />
+            android:src="@drawable/logo_blue" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/info_title_name"
             android:layout_centerInParent="true"
-            android:textColor="@color/white"
-            android:textStyle="normal"
-            android:textSize="24sp"
             android:gravity="center_horizontal"
-            />
+            android:text="@string/info_title_name"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="normal" />
 
 
     </RelativeLayout>
@@ -37,122 +34,118 @@
 
     <RelativeLayout
         android:id="@+id/content"
-        android:layout_below="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bottom_nav"
-        android:background="@drawable/shape_main_page"
-        >
+        android:layout_below="@+id/header"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:background="@drawable/shape_main_page">
 
         <TextView
             android:id="@+id/farm_name_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/info_farm_name"
-            android:textColor="@color/gray"
-            android:textSize="18sp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="50dp"
-            android:textStyle="bold"
-            />
+            android:layout_marginRight="20dp"
+            android:text="@string/info_farm_name"
+            android:textColor="@color/main_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/farm_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
             android:layout_below="@+id/farm_name_view"
-            />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/farm_owner_view"
-            android:layout_below="@+id/farm_name"
-            android:text="@string/info_farm_owner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/gray"
-            android:textSize="18sp"
+            android:layout_below="@+id/farm_name"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
-            android:textStyle="bold"
-            />
+            android:layout_marginRight="20dp"
+            android:text="@string/info_farm_owner"
+            android:textColor="@color/main_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/farm_owner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
             android:layout_below="@+id/farm_owner_view"
-            />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/farm_area_view"
-            android:layout_below="@+id/farm_owner"
-            android:text="@string/info_farm_area"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/gray"
-            android:textSize="18sp"
+            android:layout_below="@+id/farm_owner"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
-            android:textStyle="bold"
-            />
+            android:layout_marginRight="20dp"
+            android:text="@string/info_farm_area"
+            android:textColor="@color/main_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/farm_area"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
             android:layout_below="@+id/farm_area_view"
-            />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/farm_phone_view"
-            android:layout_below="@+id/farm_area"
-            android:text="@string/info_farm_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/gray"
-            android:textSize="18sp"
+            android:layout_below="@+id/farm_area"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
-            android:textStyle="bold"
-            />
+            android:layout_marginRight="20dp"
+            android:text="@string/info_farm_phone"
+            android:textColor="@color/main_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/farm_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
             android:layout_below="@+id/farm_phone_view"
-            />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
     </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottom_nav"
-        app:itemBackground="@color/white"
-        app:itemTextColor="@drawable/selector"
-        app:itemIconTint="@drawable/selector"
-        app:menu="@menu/menu_navigation"
         android:layout_alignParentBottom="true"
-        />
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
 
 </RelativeLayout>

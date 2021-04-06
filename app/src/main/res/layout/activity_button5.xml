@@ -4,29 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".buttons.Button5"
     android:background="@color/white"
-    >
+    tools:context=".buttons.Button5">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bottom_nav"
-        >
+        android:layout_above="@+id/bottom_nav">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/hide_keybd"
+            >
+
             <TextView
+                android:id="@+id/inp_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/inp_1"
-                android:layout_marginTop="45dp"
-                android:textSize="18sp"
-                android:text="@string/btn_inp_1"
                 android:layout_marginLeft="25dp"
-                android:textColor="@color/black"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginRight="25dp"
-                />
+                android:layout_marginBottom="10dp"
+                android:text="@string/btn_inp_1"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
             <EditText
                 android:id="@+id/btn5_input_1"
                 android:layout_width="match_parent"
@@ -35,159 +41,158 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:background="@drawable/inputs"
-                android:paddingLeft="20dp"
                 android:hint="@string/input_tint"
                 android:inputType="text"
+                android:paddingLeft="20dp"
                 android:textColorHint="@color/gray" />
 
 
             <TextView
+                android:id="@+id/inp_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/inp_2"
                 android:layout_below="@+id/btn5_input_1"
-                android:textSize="18sp"
-                android:text="@string/btn_inp_2"
                 android:layout_marginLeft="25dp"
-                android:textColor="@color/black"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="25dp"
-                />
+                android:layout_marginBottom="10dp"
+                android:text="@string/btn_inp_2"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
             <EditText
                 android:id="@+id/btn5_input_2"
                 android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:layout_below="@+id/inp_2"
-                android:hint="@string/input_tint"
-                android:inputType="text"
-                android:textColorHint="@color/gray"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:background="@drawable/inputs"
-                android:layout_height="40dp"
-                android:paddingLeft="20dp"/>
+                android:hint="@string/input_tint"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:textColorHint="@color/gray" />
 
 
             <TextView
+                android:id="@+id/inp_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/inp_3"
                 android:layout_below="@+id/btn5_input_2"
-                android:textSize="18sp"
-                android:text="@string/btn_inp_3"
                 android:layout_marginLeft="25dp"
-                android:textColor="@color/black"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="25dp"
-                />
+                android:layout_marginBottom="10dp"
+                android:text="@string/btn_inp_3"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
             <EditText
                 android:id="@+id/btn5_input_3"
                 android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:layout_below="@+id/inp_3"
-                android:hint="@string/input_tint"
-                android:inputType="text"
-                android:textColorHint="@color/gray"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:background="@drawable/inputs"
-                android:layout_height="40dp"
-                android:paddingLeft="20dp"/>
+                android:hint="@string/input_tint"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:textColorHint="@color/gray" />
 
 
             <TextView
+                android:id="@+id/inp_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/inp_4"
                 android:layout_below="@+id/btn5_input_3"
-                android:textSize="18sp"
-                android:text="@string/btn_inp_4"
                 android:layout_marginLeft="25dp"
-                android:textColor="@color/black"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="25dp"
-                />
+                android:layout_marginBottom="10dp"
+                android:text="@string/btn_inp_4"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
             <EditText
                 android:id="@+id/btn5_input_4"
                 android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:layout_below="@+id/inp_4"
-                android:hint="@string/input_tint"
-                android:inputType="text"
-                android:textColorHint="@color/gray"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:background="@drawable/inputs"
-                android:layout_height="40dp"
-                android:paddingLeft="20dp"/>
+                android:hint="@string/input_tint"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:textColorHint="@color/gray" />
 
 
             <TextView
+                android:id="@+id/inp_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/inp_5"
                 android:layout_below="@+id/btn5_input_4"
-                android:textSize="18sp"
-                android:text="@string/btn_inp_5"
                 android:layout_marginLeft="25dp"
-                android:textColor="@color/black"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="25dp"
-                />
+                android:layout_marginBottom="10dp"
+                android:text="@string/btn_inp_5"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
             <EditText
                 android:id="@+id/btn5_input_5"
                 android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:layout_below="@+id/inp_5"
-                android:hint="@string/input_tint"
-                android:inputType="text"
-                android:textColorHint="@color/gray"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:background="@drawable/inputs"
-                android:layout_height="40dp"
-                android:paddingLeft="20dp"/>
+                android:hint="@string/input_tint"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:textColorHint="@color/gray" />
 
 
             <TextView
+                android:id="@+id/inp_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/inp_6"
                 android:layout_below="@+id/btn5_input_5"
-                android:textSize="18sp"
-                android:text="@string/btn_inp_6"
                 android:layout_marginLeft="25dp"
-                android:textColor="@color/black"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
                 android:layout_marginRight="25dp"
-                />
+                android:layout_marginBottom="10dp"
+                android:text="@string/btn_inp_6"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
             <EditText
                 android:id="@+id/btn5_input_6"
                 android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:layout_below="@+id/inp_6"
-                android:hint="@string/input_tint"
-                android:inputType="text"
-                android:textColorHint="@color/gray"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:background="@drawable/inputs"
-                android:layout_height="40dp"
-                android:paddingLeft="20dp"/>
+                android:hint="@string/input_tint"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:textColorHint="@color/gray" />
 
             <Button
-                android:layout_marginTop="45dp"
-                android:layout_marginBottom="45dp"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@drawable/my_button"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:text="@string/button_dialog"
-                android:textSize="15sp"
                 android:layout_below="@id/btn5_input_6"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="45dp"
+                android:background="@drawable/my_button"
                 android:onClick="fill_btn_5"
-                />
+                android:text="@string/button_dialog"
+                android:textSize="15sp" />
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

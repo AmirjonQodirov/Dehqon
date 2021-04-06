@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@color/main_green"
-    >
+    tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bottom_nav"
-        >
+        android:layout_above="@+id/bottom_nav">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
+
             <RelativeLayout
                 android:id="@+id/header"
                 android:layout_width="match_parent"
@@ -26,409 +25,415 @@
                     android:id="@+id/logo_blue"
                     android:layout_width="85dp"
                     android:layout_height="85dp"
-                    android:src="@drawable/logo_blue"
-                    />
+                    android:src="@drawable/logo_blue" />
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/main_page_title_name"
                     android:layout_centerInParent="true"
-                    android:textColor="@color/white"
-                    android:textStyle="normal"
-                    android:textSize="24sp"
                     android:gravity="center_horizontal"
-                    />
+                    android:text="@string/main_page_title_name"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="normal" />
 
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/content"
-                android:layout_below="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/shape_main_page"
-                >
+                android:layout_below="@+id/header"
+                android:background="@drawable/shape_main_page">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="150dp"
-                            android:gravity="center"
-                            android:weightSum="2"
-                            android:orientation="horizontal" >
+                        android:layout_width="fill_parent"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
 
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn1"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginRight="7dp"
-                                android:layout_marginEnd="7dp"
-                                android:layout_marginStart="15dp"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:onClick="btn_clicked"
-                                app:icon="@drawable/btn1"
-                                app:iconSize="45dp"
-                                app:iconTint="@color/black"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_1_name"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-                                />
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn2"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="7dp"
-                                android:layout_marginRight="15dp"
-                                android:layout_marginStart="7dp"
-                                android:layout_marginEnd="15dp"
-                                android:onClick="btn_clicked"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_2_name"
-                                app:cornerRadius="10dp"
-                                app:icon="@drawable/btn2"
-                                app:iconSize="45dp"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn1"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_1_name"
+                            android:textSize="12sp"
+                            app:icon="@drawable/btn1"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
 
-                                app:iconTint="@color/black"
-                                />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn2"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_2_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn2"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
 
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="150dp"
-                            android:gravity="center"
-                            android:weightSum="2"
-                            android:orientation="horizontal" >
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn3"
-                                app:icon="@drawable/btn3"
-                                app:iconSize="45dp"
-                                android:textSize="12sp"
-                                app:iconTint="@color/black"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginRight="7dp"
-                                android:layout_marginEnd="7dp"
-                                android:onClick="btn_clicked"
-                                android:layout_marginStart="15dp"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_3_name"
-                                app:cornerRadius="10dp"
-                                />
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn4"
-                                app:icon="@drawable/btn4"
-                                app:iconSize="45dp"
-                                app:iconTint="@color/black"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="7dp"
-                                android:layout_marginRight="15dp"
-                                android:layout_marginStart="7dp"
-                                android:layout_marginEnd="15dp"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:onClick="btn_clicked"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-                                android:layout_weight="1"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_4_name"
-                                app:cornerRadius="10dp"
-                                />
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="150dp"
-                            android:gravity="center"
-                            android:weightSum="2"
-                            android:orientation="horizontal" >
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn5"
-                                app:icon="@drawable/btn5"
-                                app:iconSize="45dp"
-                                android:textSize="12sp"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-                                app:iconTint="@color/black"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginRight="7dp"
-                                android:onClick="btn_clicked"
-                                android:layout_marginEnd="7dp"
-                                android:layout_marginStart="15dp"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_5_name"
-                                app:cornerRadius="10dp"
-                                />
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn6"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="7dp"
-                                app:icon="@drawable/btn6"
-                                app:iconSize="45dp"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-                                android:textSize="12sp"
-                                app:iconTint="@color/black"
-                                android:layout_marginRight="15dp"
-                                android:onClick="btn_clicked"
-                                android:layout_marginStart="7dp"
-                                android:layout_marginEnd="15dp"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_6_name"
-                                app:cornerRadius="10dp"
-                                />
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="150dp"
-                            android:gravity="center"
-                            android:weightSum="2"
-                            android:orientation="horizontal" >
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn7"
-                                android:layout_marginTop="15dp"
-                                app:icon="@drawable/btn7"
-                                app:iconSize="45dp"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-                                app:iconTint="@color/black"
-                                android:onClick="btn_clicked"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginRight="7dp"
-                                android:layout_marginEnd="7dp"
-                                android:layout_marginStart="15dp"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_7_name"
-                                app:cornerRadius="10dp"
-                                />
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn8"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="7dp"
-                                app:icon="@drawable/btn8"
-                                app:iconSize="45dp"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-
-                                app:iconTint="@color/black"
-                                android:layout_marginRight="15dp"
-                                android:layout_marginStart="7dp"
-                                android:onClick="btn_clicked"
-                                android:layout_marginEnd="15dp"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_8_name"
-                                app:cornerRadius="10dp"
-                                />
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="150dp"
-                            android:gravity="center"
-                            android:weightSum="2"
-                            android:orientation="horizontal" >
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn9"
-                                app:icon="@drawable/btn9"
-                                app:iconSize="45dp"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-
-                                app:iconTint="@color/black"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginRight="7dp"
-                                android:layout_marginEnd="7dp"
-                                android:onClick="btn_clicked"
-                                android:layout_marginStart="15dp"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_9_name"
-                                app:cornerRadius="10dp"
-                                />
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn10"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="7dp"
-                                android:layout_marginRight="15dp"
-                                android:layout_marginStart="7dp"
-                                android:layout_marginEnd="15dp"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:onClick="btn_clicked"
-                                android:layout_weight="1"
-                                app:icon="@drawable/btn10"
-                                app:iconSize="45dp"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-
-                                app:iconTint="@color/black"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_10_name"
-                                app:cornerRadius="10dp"
-                                />
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="150dp"
-                            android:gravity="center"
-                            android:weightSum="2"
-                            android:orientation="horizontal" >
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn11"
-                                app:icon="@drawable/btn11"
-                                app:iconSize="45dp"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-
-                                app:iconTint="@color/black"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginRight="7dp"
-                                android:layout_marginEnd="7dp"
-                                android:onClick="btn_clicked"
-                                android:layout_marginStart="15dp"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_11_name"
-                                app:cornerRadius="10dp"
-                                />
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn12"
-                                app:icon="@drawable/btn12"
-                                app:iconSize="45dp"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-                                app:iconTint="@color/black"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="7dp"
-                                android:layout_marginRight="15dp"
-                                android:layout_marginStart="7dp"
-                                android:layout_marginEnd="15dp"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:onClick="btn_clicked"
-                                android:layout_weight="1"
-                                android:textSize="12sp"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_12_name"
-                                app:cornerRadius="10dp"
-                                />
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="150dp"
-                            android:gravity="center"
-                            android:weightSum="2"
-                            android:orientation="horizontal" >
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn13"
-                                app:icon="@drawable/btn13"
-                                app:iconSize="45dp"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-                                app:iconTint="@color/black"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginRight="7dp"
-                                android:layout_marginEnd="7dp"
-                                android:layout_marginStart="15dp"
-                                android:layout_width="0dp"
-                                android:onClick="btn_clicked"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_13_name"
-                                app:cornerRadius="10dp"
-                                />
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn14"
-                                app:icon="@drawable/btn14"
-                                app:iconSize="45dp"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-
-                                app:iconTint="@color/black"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="7dp"
-                                android:layout_marginRight="15dp"
-                                android:layout_marginStart="7dp"
-                                android:layout_marginEnd="15dp"
-                                android:layout_width="0dp"
-                                android:onClick="btn_clicked"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_14_name"
-                                app:cornerRadius="10dp"
-                                />
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="150dp"
-                            android:gravity="center"
-                            android:weightSum="2"
-                            android:orientation="horizontal" >
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn15"
-                                app:icon="@drawable/btn15"
-                                app:iconSize="45dp"
-                                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
-                                app:iconTint="@color/black"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginStart="15dp"
-                                android:layout_width="0dp"
-                                android:onClick="btn_clicked"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@drawable/shape_main_for_buttons"
-                                android:text="@string/btn_15_name"
-                                />
-                        </LinearLayout>
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn3"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_3_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn3"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn4"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_4_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn4"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn5"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_5_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn5"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn6"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_6_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn6"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn7"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_7_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn7"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn8"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_8_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn8"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn9"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_9_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn9"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn10"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_10_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn10"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn11"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_marginStart="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_11_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn11"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn12"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_12_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn12"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn13"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_13_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn13"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn14"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_14_name"
+                            android:textSize="12sp"
+                            app:cornerRadius="10dp"
+                            app:icon="@drawable/btn14"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="150dp"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:weightSum="2">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn15"
+                            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_main_for_buttons"
+                            android:onClick="btn_clicked"
+                            android:text="@string/btn_15_name"
+                            android:textSize="12sp"
+                            app:icon="@drawable/btn15"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/black" />
+                    </LinearLayout>
+                </LinearLayout>
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottom_nav"
-        app:itemBackground="@color/white"
-        app:itemTextColor="@drawable/selector"
-        app:itemIconTint="@drawable/selector"
-        app:menu="@menu/menu_navigation"
         android:layout_alignParentBottom="true"
-        />
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
 
 </RelativeLayout>
