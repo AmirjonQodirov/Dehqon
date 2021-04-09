@@ -9,6 +9,11 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +25,7 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
+import com.itextpdf.text.Image;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.BaseFont;
@@ -27,14 +33,17 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 import es.dmoral.toasty.Toasty;
 
 public class Reports extends AppCompatActivity {
     private static final int PERMISSION_REQUEST_CODE = 100;
+    private static String farm_name, farm_owner, farm_area, farm_phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +51,19 @@ public class Reports extends AppCompatActivity {
         setContentView(R.layout.activity_reports);
         isReadStoragePermissionGranted();
         isWriteStoragePermissionGranted();
+
+
+        farm_name = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getString("farm_name", "NULL");
+
+        farm_owner = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getString("farm_owner", "NULL");
+
+        farm_area = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getString("farm_area", "NULL");
+
+        farm_phone = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getString("farm_phone", "NULL");
 
         BottomNavigationView bnv = findViewById(R.id.bottom_nav);
         bnv.setSelectedItemId(R.id.reports);
@@ -86,7 +108,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_1_row5,
                 DBHelper.TABLE_1_row6
         };
-        createPDF("1.pdf", DBHelper.TABLE_1,table_rows);
+        createPDF("Корҳои_механикӣ.pdf", DBHelper.TABLE_1,table_rows);
 
     }
     public void rep_btn2(View view) {
@@ -103,7 +125,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_2_row5,
                 DBHelper.TABLE_2_row6
         };
-        createPDF("2.pdf", DBHelper.TABLE_2,table_rows);
+        createPDF("Корҳои_дастӣ.pdf", DBHelper.TABLE_2,table_rows);
     }
     public void rep_btn3(View view) {
         try {
@@ -123,7 +145,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_3_row9,
                 DBHelper.TABLE_3_row10,
         };
-        createPDF("3.pdf", DBHelper.TABLE_3,table_rows);
+        createPDF("Истифодабарии_нуриҳо.pdf", DBHelper.TABLE_3,table_rows);
     }
     public void rep_btn4(View view) {
         try {
@@ -141,7 +163,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_4_row7,
                 DBHelper.TABLE_4_row8,
         };
-        createPDF("4.pdf", DBHelper.TABLE_4,table_rows);
+        createPDF("Обмонӣ.pdf", DBHelper.TABLE_4,table_rows);
 
     }
     public void rep_btn5(View view) {
@@ -158,7 +180,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_5_row5,
                 DBHelper.TABLE_5_row6,
         };
-        createPDF("5.pdf", DBHelper.TABLE_5,table_rows);
+        createPDF("Муҳофизати_интегратсионнии_растанӣ.pdf", DBHelper.TABLE_5,table_rows);
     }
     public void rep_btn6(View view) {
         try {
@@ -181,7 +203,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_6_row12,
                 DBHelper.TABLE_6_row13,
         };
-        createPDF("6.pdf", DBHelper.TABLE_6,table_rows);
+        createPDF("Истифодабарии_заҳрхимикатҳо.pdf", DBHelper.TABLE_6,table_rows);
     }
     public void rep_btn7(View view) {
         try {
@@ -199,7 +221,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_7_row7,
                 DBHelper.TABLE_7_row8,
         };
-        createPDF("7.pdf", DBHelper.TABLE_7,table_rows);
+        createPDF("Ҷамъоварии_ҳосил.pdf", DBHelper.TABLE_7,table_rows);
     }
     public void rep_btn8(View view) {
         try {
@@ -216,7 +238,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_8_row6,
                 DBHelper.TABLE_8_row7,
         };
-        createPDF("8.pdf", DBHelper.TABLE_8,table_rows);
+        createPDF("Корӽои_ислоӽотӣ.pdf", DBHelper.TABLE_8,table_rows);
     }
     public void rep_btn9(View view) {
         try {
@@ -234,7 +256,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_9_row7,
                 DBHelper.TABLE_9_row8
         };
-        createPDF("9.pdf", DBHelper.TABLE_9,table_rows);
+        createPDF("Омӯзиши_коргарон.pdf", DBHelper.TABLE_9,table_rows);
     }
     public void rep_btn10(View view) {
         try {
@@ -250,7 +272,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_10_row5,
                 DBHelper.TABLE_10_row6,
         };
-        createPDF("10.pdf", DBHelper.TABLE_10,table_rows);
+        createPDF("Арзу_шикоятҳо.pdf", DBHelper.TABLE_10,table_rows);
     }
     public void rep_btn11(View view) {
         try {
@@ -267,7 +289,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_11_row6,
                 DBHelper.TABLE_11_row7,
         };
-        createPDF("11.pdf", DBHelper.TABLE_11,table_rows);
+        createPDF("Баргардонидани_маӽсулот.pdf", DBHelper.TABLE_11,table_rows);
     }
     public void rep_btn12(View view) {
         try {
@@ -283,7 +305,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_12_row5,
                 DBHelper.TABLE_12_row6,
         };
-        createPDF("12.pdf", DBHelper.TABLE_12,table_rows);
+        createPDF("Ҳисоботи_нигоӽдории_заӽрхимикатӽо.pdf", DBHelper.TABLE_12,table_rows);
     }
     public void rep_btn13(View view) {
         try {
@@ -299,7 +321,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_13_row5,
                 DBHelper.TABLE_13_row6,
         };
-        createPDF("13.pdf", DBHelper.TABLE_13,table_rows);
+        createPDF("Ҳисоботи_нигоӽдории_нуриӽо.pdf", DBHelper.TABLE_13,table_rows);
     }
     public void rep_btn14(View view) {
         try {
@@ -320,7 +342,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_14_row10,
 
         };
-        createPDF("14.pdf", DBHelper.TABLE_14,table_rows);
+        createPDF("Коркарди_маӽсулот.pdf", DBHelper.TABLE_14,table_rows);
     }
     public void rep_btn15(View view) {
         try {
@@ -337,7 +359,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_15_row6,
 
         };
-        createPDF("15.pdf", DBHelper.TABLE_15,table_rows);
+        createPDF("Тозза_намудани_либоси_махсуси_муҳофизатӣ.pdf", DBHelper.TABLE_15,table_rows);
     }
 
 
@@ -366,19 +388,49 @@ public class Reports extends AppCompatActivity {
             Font urFontName_bold = new Font(urName_bold);
 
             doc.open();
-            Paragraph p1 = new Paragraph(table_name);
-            p1.setFont(urFontName_bold);
-            p1.setAlignment(Paragraph.ALIGN_CENTER);
-            doc.add(p1);
+            Paragraph p = new Paragraph();
+            p.setFont(urFontName_bold);
+            p.setAlignment(Element.ALIGN_CENTER);
+            p.add(table_name);
+            doc.add(p);
+
+            p = new Paragraph();
+            p.setFont(urFontName_bold);
+            p.setAlignment(Element.ALIGN_CENTER);
+            p.add("Номи хочагии дехкони: " + farm_name);
+            doc.add(p);
+
+            p = new Paragraph();
+            p.setFont(urFontName_bold);
+            p.setAlignment(Element.ALIGN_CENTER);
+            p.add("Раиси хочагии дехкони: " + farm_owner);
+            doc.add(p);
+
+
+            p = new Paragraph();
+            p.setFont(urFontName_bold);
+            p.setAlignment(Element.ALIGN_CENTER);
+            p.add("Масохати хочагии дехкони: " + farm_area);
+            doc.add(p);
+
+            p = new Paragraph();
+            p.setFont(urFontName_bold);
+            p.setAlignment(Element.ALIGN_CENTER);
+            p.add("Раками телефон: " + farm_phone);
+            doc.add(p);
+
 
             int length = table_rows.length;
             PdfPTable table = new PdfPTable(length);
+            table.setSpacingBefore(10f);
+            table.setHorizontalAlignment(Element.ALIGN_CENTER);
+
             for (int i = 0; i < length; i++) {
                 table.addCell(new PdfPCell(new Phrase(table_rows[i], urFontName_bold)));
             }
 
             SQLiteDatabase database = db.getWritableDatabase();
-            Cursor cursor = database.query(table_name, null, null, null, null, null, null);
+            Cursor cursor = database.query(true, table_name, table_rows, null, null, null, null, null, null);
             if (cursor.moveToFirst()){
                 do {
                     for (int i = 0; i < length; i++) {

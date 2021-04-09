@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -14,7 +15,9 @@ import android.widget.Toast;
 
 import es.dmoral.toasty.Toasty;
 import tj.mobile.dehqon.DBHelper;
+import tj.mobile.dehqon.MainActivity;
 import tj.mobile.dehqon.R;
+import tj.mobile.dehqon.SplashScreen;
 
 public class Button1 extends AppCompatActivity {
 
@@ -71,6 +74,8 @@ public class Button1 extends AppCompatActivity {
             Toasty.success(Button1.this,
                     "Навишти шумо ба База дохил шуд",
                     Toast.LENGTH_SHORT, true).show();
+            toMain();
+
         }else{
             Toasty.error(Button1.this,
                     "Илтимос ба ҳамаи саволҳо ҳатман ҷавоб диҳед",
@@ -78,5 +83,12 @@ public class Button1 extends AppCompatActivity {
         }
         Thread.sleep(10);
         db.close();
+
+    }
+
+    private void toMain() {
+        Intent i = new Intent (Button1.this, MainActivity.class);
+        startActivity(i);
+        finish ();
     }
 }
