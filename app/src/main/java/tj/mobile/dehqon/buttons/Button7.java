@@ -80,11 +80,11 @@ public class Button7 extends AppCompatActivity {
             Toasty.success(Button7.this,
                     "Навишти шумо ба База дохил шуд",
                     Toast.LENGTH_SHORT, true).show();
+            toMain();
         } else {
             Toasty.error(Button7.this,
                     "Илтимос ба ҳамаи саволҳо ҳатман ҷавоб диҳед",
                     Toast.LENGTH_SHORT, true).show();
-            toMain();
         }
         Thread.sleep(10);
         db.close();

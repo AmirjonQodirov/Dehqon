@@ -43,7 +43,6 @@ import es.dmoral.toasty.Toasty;
 
 public class Reports extends AppCompatActivity {
     private static final int PERMISSION_REQUEST_CODE = 100;
-    private static String farm_name, farm_owner, farm_area, farm_phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,39 +51,26 @@ public class Reports extends AppCompatActivity {
         isReadStoragePermissionGranted();
         isWriteStoragePermissionGranted();
 
-
-        farm_name = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
-                .getString("farm_name", "NULL");
-
-        farm_owner = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
-                .getString("farm_owner", "NULL");
-
-        farm_area = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
-                .getString("farm_area", "NULL");
-
-        farm_phone = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
-                .getString("farm_phone", "NULL");
-
         BottomNavigationView bnv = findViewById(R.id.bottom_nav);
         bnv.setSelectedItemId(R.id.reports);
 
         bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.reports:
                         return true;
                     case R.id.info:
                         startActivity(new Intent(getApplicationContext(), Info.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
                         return true;
                     case R.id.contact:
                         startActivity(new Intent(getApplicationContext(), Contacts.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
                         return true;
                     case R.id.main:
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
                         return true;
                 }
                 return false;
@@ -94,12 +80,7 @@ public class Reports extends AppCompatActivity {
     }
 
     public void rep_btn1(View view) {
-
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        String value = DBHelper.TABLE_1;
         String[] table_rows = {
                 DBHelper.TABLE_1_row1,
                 DBHelper.TABLE_1_row2,
@@ -108,15 +89,15 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_1_row5,
                 DBHelper.TABLE_1_row6
         };
-        createPDF("Корҳои_механикӣ.pdf", DBHelper.TABLE_1,table_rows);
 
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", value);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Корҳои_механикӣ.pdf");
+        startActivity(i);
     }
+
     public void rep_btn2(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_2_row1,
                 DBHelper.TABLE_2_row2,
@@ -125,14 +106,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_2_row5,
                 DBHelper.TABLE_2_row6
         };
-        createPDF("Корҳои_дастӣ.pdf", DBHelper.TABLE_2,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_2);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Корҳои_дастӣ.pdf");
+        startActivity(i);
     }
+
     public void rep_btn3(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_3_row1,
                 DBHelper.TABLE_3_row2,
@@ -145,14 +126,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_3_row9,
                 DBHelper.TABLE_3_row10,
         };
-        createPDF("Истифодабарии_нуриҳо.pdf", DBHelper.TABLE_3,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_3);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Истифодабарии_нуриҳо.pdf");
+        startActivity(i);
     }
+
     public void rep_btn4(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_4_row1,
                 DBHelper.TABLE_4_row2,
@@ -163,15 +144,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_4_row7,
                 DBHelper.TABLE_4_row8,
         };
-        createPDF("Обмонӣ.pdf", DBHelper.TABLE_4,table_rows);
-
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_4);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Обмонӣ.pdf");
+        startActivity(i);
     }
+
     public void rep_btn5(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_5_row1,
                 DBHelper.TABLE_5_row2,
@@ -180,14 +160,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_5_row5,
                 DBHelper.TABLE_5_row6,
         };
-        createPDF("Муҳофизати_интегратсионнии_растанӣ.pdf", DBHelper.TABLE_5,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_5);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Муҳофизати_интегратсионнии_растанӣ.pdf");
+        startActivity(i);
     }
+
     public void rep_btn6(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_6_row1,
                 DBHelper.TABLE_6_row2,
@@ -203,14 +183,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_6_row12,
                 DBHelper.TABLE_6_row13,
         };
-        createPDF("Истифодабарии_заҳрхимикатҳо.pdf", DBHelper.TABLE_6,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_6);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Истифодабарии_заҳрхимикатҳо.pdf");
+        startActivity(i);
     }
+
     public void rep_btn7(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_7_row1,
                 DBHelper.TABLE_7_row2,
@@ -221,14 +201,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_7_row7,
                 DBHelper.TABLE_7_row8,
         };
-        createPDF("Ҷамъоварии_ҳосил.pdf", DBHelper.TABLE_7,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_7);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Ҷамъоварии_ҳосил.pdf");
+        startActivity(i);
     }
+
     public void rep_btn8(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_8_row1,
                 DBHelper.TABLE_8_row2,
@@ -238,14 +218,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_8_row6,
                 DBHelper.TABLE_8_row7,
         };
-        createPDF("Корӽои_ислоӽотӣ.pdf", DBHelper.TABLE_8,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_8);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Корӽои_ислоӽотӣ.pdf");
+        startActivity(i);
     }
+
     public void rep_btn9(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_9_row1,
                 DBHelper.TABLE_9_row2,
@@ -256,14 +236,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_9_row7,
                 DBHelper.TABLE_9_row8
         };
-        createPDF("Омӯзиши_коргарон.pdf", DBHelper.TABLE_9,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_9);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Омӯзиши_коргарон.pdf");
+        startActivity(i);
     }
+
     public void rep_btn10(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_10_row1,
                 DBHelper.TABLE_10_row2,
@@ -272,14 +252,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_10_row5,
                 DBHelper.TABLE_10_row6,
         };
-        createPDF("Арзу_шикоятҳо.pdf", DBHelper.TABLE_10,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_10);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Арзу_шикоятҳо.pdf");
+        startActivity(i);
     }
+
     public void rep_btn11(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_11_row1,
                 DBHelper.TABLE_11_row2,
@@ -289,14 +269,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_11_row6,
                 DBHelper.TABLE_11_row7,
         };
-        createPDF("Баргардонидани_маӽсулот.pdf", DBHelper.TABLE_11,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_11);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Баргардонидани_маӽсулот.pdf");
+        startActivity(i);
     }
+
     public void rep_btn12(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_12_row1,
                 DBHelper.TABLE_12_row2,
@@ -305,14 +285,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_12_row5,
                 DBHelper.TABLE_12_row6,
         };
-        createPDF("Ҳисоботи_нигоӽдории_заӽрхимикатӽо.pdf", DBHelper.TABLE_12,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_12);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Ҳисоботи_нигоӽдории_заӽрхимикатӽо.pdf");
+        startActivity(i);
     }
+
     public void rep_btn13(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_13_row1,
                 DBHelper.TABLE_13_row2,
@@ -321,14 +301,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_13_row5,
                 DBHelper.TABLE_13_row6,
         };
-        createPDF("Ҳисоботи_нигоӽдории_нуриӽо.pdf", DBHelper.TABLE_13,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_13);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Ҳисоботи_нигоӽдории_нуриӽо.pdf");
+        startActivity(i);
     }
+
     public void rep_btn14(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_14_row1,
                 DBHelper.TABLE_14_row2,
@@ -340,10 +320,14 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_14_row8,
                 DBHelper.TABLE_14_row9,
                 DBHelper.TABLE_14_row10,
-
         };
-        createPDF("Коркарди_маӽсулот.pdf", DBHelper.TABLE_14,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_14);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Коркарди_маӽсулот.pdf");
+        startActivity(i);
     }
+
     public void rep_btn15(View view) {
         try {
             Thread.sleep(10);
@@ -357,137 +341,46 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_15_row4,
                 DBHelper.TABLE_15_row5,
                 DBHelper.TABLE_15_row6,
-
         };
-        createPDF("Тозза_намудани_либоси_махсуси_муҳофизатӣ.pdf", DBHelper.TABLE_15,table_rows);
+        Intent i = new Intent(Reports.this, ViewTable.class);
+        i.putExtra("table_name", DBHelper.TABLE_15);
+        i.putExtra("table_rows", table_rows);
+        i.putExtra("file_name", "Тозза_намудани_либоси_махсуси_муҳофизатӣ.pdf");
+        startActivity(i);
     }
 
-
-    public void createPDF(String file_name, String table_name, String[] table_rows) {
-
-        Document doc = new Document();
-        DBHelper db = new DBHelper(this);
-        try {
-            String path = "/storage/emulated/0/Download/Dehqon";
-            File dir = new File(path);
-            if(!dir.exists()){
-                dir.mkdirs();
-                dir.createNewFile();
-            }
-
-            File file = new File(dir, file_name);
-            if (file.exists()) {
-                file.delete();
-            }
-            file.createNewFile();
-
-            FileOutputStream fOut = new FileOutputStream(file);
-            PdfWriter.getInstance(doc, fOut);
-
-            BaseFont urName_bold = BaseFont.createFont("res/font/academy_tajik.TTF", "Cp1251",BaseFont.EMBEDDED);
-            Font urFontName_bold = new Font(urName_bold);
-
-            doc.open();
-            Paragraph p = new Paragraph();
-            p.setFont(urFontName_bold);
-            p.setAlignment(Element.ALIGN_CENTER);
-            p.add(table_name);
-            doc.add(p);
-
-            p = new Paragraph();
-            p.setFont(urFontName_bold);
-            p.setAlignment(Element.ALIGN_CENTER);
-            p.add("Номи хочагии дехкони: " + farm_name);
-            doc.add(p);
-
-            p = new Paragraph();
-            p.setFont(urFontName_bold);
-            p.setAlignment(Element.ALIGN_CENTER);
-            p.add("Раиси хочагии дехкони: " + farm_owner);
-            doc.add(p);
-
-
-            p = new Paragraph();
-            p.setFont(urFontName_bold);
-            p.setAlignment(Element.ALIGN_CENTER);
-            p.add("Масохати хочагии дехкони: " + farm_area);
-            doc.add(p);
-
-            p = new Paragraph();
-            p.setFont(urFontName_bold);
-            p.setAlignment(Element.ALIGN_CENTER);
-            p.add("Раками телефон: " + farm_phone);
-            doc.add(p);
-
-
-            int length = table_rows.length;
-            PdfPTable table = new PdfPTable(length);
-            table.setSpacingBefore(10f);
-            table.setHorizontalAlignment(Element.ALIGN_CENTER);
-
-            for (int i = 0; i < length; i++) {
-                table.addCell(new PdfPCell(new Phrase(table_rows[i], urFontName_bold)));
-            }
-
-            SQLiteDatabase database = db.getWritableDatabase();
-            Cursor cursor = database.query(true, table_name, table_rows, null, null, null, null, null, null);
-            if (cursor.moveToFirst()){
-                do {
-                    for (int i = 0; i < length; i++) {
-                        table.addCell(new PdfPCell(new Phrase(cursor.getString(cursor.getColumnIndex(table_rows[i])), urFontName_bold)));
-                    }
-                } while (cursor.moveToNext());
-            }
-            cursor.close();
-            doc.add((Element) table);
-            Toasty.info(Reports.this, "Файли шумо дар папкаи Download/Dehqon сабт шуд", Toasty.LENGTH_LONG, true).show();
-
-        } catch (DocumentException de) {
-            Log.e("PDFCreator", "DocumentException:" + de);
-        } catch (IOException e) {
-            Log.e("PDFCreator", "ioException:" + e);
-        } finally
-        {
-            doc.close();
-            db.close();
-        }
-    }
-
-
-    public  boolean isReadStoragePermissionGranted() {
+    public boolean isReadStoragePermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
-                Log.v("permission","Permission is granted1");
+                Log.v("permission", "Permission is granted1");
                 return true;
             } else {
 
-                Log.v("permission","Permission is revoked1");
+                Log.v("permission", "Permission is revoked1");
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 3);
                 return false;
             }
-        }
-        else { //permission is automatically granted on sdk<23 upon installation
-            Log.v("permission","Permission is granted3");
+        } else { //permission is automatically granted on sdk<23 upon installation
+            Log.v("permission", "Permission is granted3");
             return true;
         }
     }
 
-    public  boolean isWriteStoragePermissionGranted() {
+    public boolean isWriteStoragePermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
-                Log.v("permission","Permission is granted2");
+                Log.v("permission", "Permission is granted2");
                 return true;
             } else {
 
-                Log.v("permission","Permission is revoked2");
+                Log.v("permission", "Permission is revoked2");
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
                 return false;
             }
-        }
-        else { //permission is automatically granted on sdk<23 upon installation
-            Log.v("permission","Permission is granted3");
+        } else { //permission is automatically granted on sdk<23 upon installation
+            Log.v("permission", "Permission is granted3");
             return true;
         }
     }
@@ -504,7 +397,4 @@ public class Reports extends AppCompatActivity {
                 break;
         }
     }
-
-
-
 }

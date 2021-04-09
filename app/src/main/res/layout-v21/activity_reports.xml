@@ -70,9 +70,9 @@
                     android:text="@string/btn_1_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -91,9 +91,9 @@
                     android:text="@string/btn_2_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -113,9 +113,9 @@
                     android:text="@string/btn_3_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -134,9 +134,9 @@
                     android:text="@string/btn_4_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -155,9 +155,9 @@
                     android:text="@string/btn_5_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -176,9 +176,9 @@
                     android:text="@string/btn_6_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -197,9 +197,9 @@
                     android:text="@string/btn_7_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -218,9 +218,9 @@
                     android:text="@string/btn_8_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -239,9 +239,9 @@
                     android:text="@string/btn_9_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -260,9 +260,9 @@
                     android:text="@string/btn_10_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -281,9 +281,9 @@
                     android:text="@string/btn_11_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -302,9 +302,9 @@
                     android:text="@string/btn_12_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -323,9 +323,9 @@
                     android:text="@string/btn_13_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -344,9 +344,9 @@
                     android:text="@string/btn_14_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
                 <Button
@@ -366,9 +366,9 @@
                     android:text="@string/btn_15_name"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    app:icon="@drawable/ic_pdf"
+                    app:icon="@drawable/ic_cells"
                     app:iconGravity="end"
-                    app:iconSize="50dp"
+                    app:iconSize="30dp"
                     app:iconTint="@color/black" />
 
             </RelativeLayout>
