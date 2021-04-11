@@ -22,10 +22,12 @@
 
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginRight="95dp"
+            android:layout_toRightOf="@+id/logo_blue"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:gravity="center_horizontal"
+            android:layout_centerVertical="true"
             android:text="@string/contacts_title_name"
             android:textColor="@color/white"
             android:textSize="24sp"
@@ -36,7 +38,6 @@
 
 
     <RelativeLayout
-        android:paddingTop="50dp"
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,16 +45,37 @@
         android:layout_below="@+id/header"
         android:background="@drawable/shape_main_page">
 
+        <TextView
+            android:id="@+id/eee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_page_top_text"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_margin="20dp"
+            />
+        <View
+            android:id="@+id/www"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_height="2dp"
+            android:layout_below="@+id/eee"
+            android:background="@color/main_green"
+            />
         <LinearLayout
+            android:layout_below="@+id/www"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:weightSum="6">
+            android:weightSum="8">
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:gravity="center"
                 android:onClick="phone_contact"
                 android:orientation="horizontal"
@@ -73,13 +95,13 @@
                     android:width="0dp"
                     android:text="Телефон: \n +992 92 771 71 68"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:gravity="center"
                 android:onClick="mail_contact"
                 android:orientation="horizontal"
@@ -99,14 +121,14 @@
                     android:width="0dp"
                     android:text="Суроғаи электорнӣ: \n info@qmc.tj"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:weightSum="3">
@@ -125,14 +147,14 @@
                     android:width="0dp"
                     android:text="Суроға: \nшаҳри Хуҷанд, \nХиёбони Исмоил Сомонӣ \n183а"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:gravity="center"
                 android:onClick="web_contact"
                 android:orientation="horizontal"
@@ -152,7 +174,7 @@
                     android:width="0dp"
                     android:text="www.qmc.tj"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

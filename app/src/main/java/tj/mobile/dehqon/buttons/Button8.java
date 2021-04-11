@@ -20,8 +20,8 @@ import tj.mobile.dehqon.R;
 
 public class Button8 extends AppCompatActivity {
 
-    EditText row1, row2, row3, row4, row5, row6, row7;
-    String r1, r2, r3, r4, r5, r6, r7;
+    EditText row1, row2, row3, row4, row5, row7;
+    String r1, r2, r3, r4, r5, r7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,6 @@ public class Button8 extends AppCompatActivity {
         row3 = findViewById(R.id.btn8_input_3);
         row4 = findViewById(R.id.btn8_input_4);
         row5 = findViewById(R.id.btn8_input_5);
-        row6 = findViewById(R.id.btn8_input_6);
         row7 = findViewById(R.id.btn8_input_7);
 
         r1 = row1.getText().toString();
@@ -55,13 +54,12 @@ public class Button8 extends AppCompatActivity {
         r3 = row3.getText().toString();
         r4 = row4.getText().toString();
         r5 = row5.getText().toString();
-        r6 = row6.getText().toString();
         r7 = row7.getText().toString();
 
         DBHelper db = new DBHelper(this);
 
         if (r1.length() > 0 && r2.length() > 0 && r3.length() > 0 && r4.length() > 0 && r5.length() > 0
-                && r6.length() > 0 && r7.length() > 0) {
+                 && r7.length() > 0) {
             SQLiteDatabase database = db.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
             contentValues.put(DBHelper.TABLE_8_row1, r1);
@@ -69,7 +67,6 @@ public class Button8 extends AppCompatActivity {
             contentValues.put(DBHelper.TABLE_8_row3, r3);
             contentValues.put(DBHelper.TABLE_8_row4, r4);
             contentValues.put(DBHelper.TABLE_8_row5, r5);
-            contentValues.put(DBHelper.TABLE_8_row6, r6);
             contentValues.put(DBHelper.TABLE_8_row7, r7);
 
             database.insert(DBHelper.TABLE_8, null, contentValues);

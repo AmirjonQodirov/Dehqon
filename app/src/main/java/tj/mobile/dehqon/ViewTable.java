@@ -17,6 +17,7 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
+import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.BaseFont;
@@ -99,6 +100,7 @@ public class ViewTable extends AppCompatActivity {
     public void createPDF(String file_name, String table_name, String[] table_rows) {
 
         Document doc = new Document();
+        doc.setPageSize(PageSize.A4.rotate());
         DBHelper db = new DBHelper(this);
         try {
             String path = "/storage/emulated/0/Download/Dehqon";
@@ -117,7 +119,7 @@ public class ViewTable extends AppCompatActivity {
             FileOutputStream fOut = new FileOutputStream(file);
             PdfWriter.getInstance(doc, fOut);
 
-            BaseFont urName_bold = BaseFont.createFont("res/font/academy_tajik.TTF", "Cp1251", BaseFont.EMBEDDED);
+            BaseFont urName_bold = BaseFont.createFont("res/font/droid_serif_regular.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
             Font urFontName_bold = new Font(urName_bold);
 
             doc.open();
@@ -130,26 +132,26 @@ public class ViewTable extends AppCompatActivity {
             p = new Paragraph();
             p.setFont(urFontName_bold);
             p.setAlignment(Element.ALIGN_CENTER);
-            p.add("Номи хочагии дехкони: " + farm_name);
+            p.add(getString(R.string.info_farm_name) +" "+ farm_name);
             doc.add(p);
 
             p = new Paragraph();
             p.setFont(urFontName_bold);
             p.setAlignment(Element.ALIGN_CENTER);
-            p.add("Раиси хочагии дехкони: " + farm_owner);
+            p.add(getString(R.string.info_farm_owner) + " "+farm_owner);
             doc.add(p);
 
 
             p = new Paragraph();
             p.setFont(urFontName_bold);
             p.setAlignment(Element.ALIGN_CENTER);
-            p.add("Масохати хочагии дехкони: " + farm_area);
+            p.add(getString(R.string.info_farm_area) + " "+farm_area);
             doc.add(p);
 
             p = new Paragraph();
             p.setFont(urFontName_bold);
             p.setAlignment(Element.ALIGN_CENTER);
-            p.add("Раками телефон: " + farm_phone);
+            p.add(getString(R.string.info_farm_phone) + " "+farm_phone);
             doc.add(p);
 
 
@@ -173,7 +175,7 @@ public class ViewTable extends AppCompatActivity {
             }
             cursor.close();
             doc.add((Element) table);
-            Toasty.info(ViewTable.this, "Файли шумо дар папкаи Download/Dehqon/" + file_name + " сабт шуд", Toasty.LENGTH_LONG, true).show();
+            Toasty.info(ViewTable.this, "Файли шумо дар папкаи Download/Dehqon/" + file_name + " сабт шуд", Toasty.LENGTH_SHORT, true).show();
 
         } catch (DocumentException de) {
             Log.e("PDFCreator", "DocumentException:" + de);

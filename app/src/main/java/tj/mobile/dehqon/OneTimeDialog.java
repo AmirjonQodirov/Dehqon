@@ -46,6 +46,7 @@ public class OneTimeDialog extends AppCompatActivity {
         name = farm_name.getText().toString();
         owner = farm_owner.getText().toString();
         area = farm_area.getText().toString();
+        area += "га";
         phone = farm_phone.getText().toString();
 
         Log.d("PDFCreator", "PDF Path: " + name);

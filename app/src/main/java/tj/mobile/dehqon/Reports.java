@@ -215,7 +215,6 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_8_row3,
                 DBHelper.TABLE_8_row4,
                 DBHelper.TABLE_8_row5,
-                DBHelper.TABLE_8_row6,
                 DBHelper.TABLE_8_row7,
         };
         Intent i = new Intent(Reports.this, ViewTable.class);
@@ -231,9 +230,7 @@ public class Reports extends AppCompatActivity {
                 DBHelper.TABLE_9_row2,
                 DBHelper.TABLE_9_row3,
                 DBHelper.TABLE_9_row4,
-                DBHelper.TABLE_9_row5,
                 DBHelper.TABLE_9_row6,
-                DBHelper.TABLE_9_row7,
                 DBHelper.TABLE_9_row8
         };
         Intent i = new Intent(Reports.this, ViewTable.class);
@@ -329,18 +326,11 @@ public class Reports extends AppCompatActivity {
     }
 
     public void rep_btn15(View view) {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String[] table_rows = {
                 DBHelper.TABLE_15_row1,
                 DBHelper.TABLE_15_row2,
                 DBHelper.TABLE_15_row3,
-                DBHelper.TABLE_15_row4,
                 DBHelper.TABLE_15_row5,
-                DBHelper.TABLE_15_row6,
         };
         Intent i = new Intent(Reports.this, ViewTable.class);
         i.putExtra("table_name", DBHelper.TABLE_15);
