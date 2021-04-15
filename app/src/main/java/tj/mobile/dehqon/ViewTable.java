@@ -79,13 +79,13 @@ public class ViewTable extends AppCompatActivity {
 
         Cursor cursor = database.query(true, table_name, table_rows, null, null, null, null, null, null);
         if (cursor.moveToFirst()) {
+
             do {
                 TableRow tr = new TableRow(this);
                 for (int i = 0; i < table_rows.length; i++) {
                     TextView text = new TextView(this);
-                    text.setText(cursor.getString(cursor.getColumnIndex(table_rows[i])));
+                    text.setText(cursor.getString((cursor.getColumnIndex(table_rows[i]))));
                     text.setBackground(getResources().getDrawable(R.drawable.text_bord));
-
                     tr.addView(text);
                 }
                 tr.setBackgroundResource(R.drawable.border_row_table);

@@ -126,7 +126,7 @@
                 android:layout_marginRight="30dp"
                 android:background="@drawable/inputs"
                 android:hint="@string/input_tint"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:paddingLeft="15dp"
                 android:textColorHint="#C5C5C5" />
 

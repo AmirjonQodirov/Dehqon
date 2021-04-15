@@ -23,7 +23,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String TABLE_12 = "Ҳисоботи_нигоӽдории_заӽрхимикатӽо";
     public static final String TABLE_13 = "Ҳисоботи_нигоӽдории_нуриӽо";
     public static final String TABLE_14 = "Коркарди_маӽсулот";
-    public static final String TABLE_15 = "Тозза_намудани_либоси_махсуси_муҳофизатӣ";
+    public static final String TABLE_15 = "Тозза_намудани_лмм";
 
     public static final String TABLE_1_KEY_ID = "_id";
     public static final String TABLE_1_row1 = "Қитъа";
@@ -159,7 +159,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static final String TABLE_15_KEY_ID = "_id";
     public static final String TABLE_15_row1 = "Сана";
-    public static final String TABLE_15_row2 = "Тозза_намуданилибоси_махсуси_муҳофизатӣ ";
+    public static final String TABLE_15_row2 = "Тозза_намуданилибоси_махсуси_муҳофизатӣ";
     public static final String TABLE_15_row3 = "Ному_насаби_коргар";
     public static final String TABLE_15_row5 = "Ному_насаби_шахси_масъул";
 
@@ -169,6 +169,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
         //1
         db.execSQL("create table " + TABLE_1 + "("
                 + TABLE_1_KEY_ID + " integer primary key, "
@@ -274,6 +275,20 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists " + TABLE_1);
+        db.execSQL("drop table if exists " + TABLE_2);
+        db.execSQL("drop table if exists " + TABLE_3);
+        db.execSQL("drop table if exists " + TABLE_4);
+        db.execSQL("drop table if exists " + TABLE_5);
+        db.execSQL("drop table if exists " + TABLE_6);
+        db.execSQL("drop table if exists " + TABLE_7);
+        db.execSQL("drop table if exists " + TABLE_8);
+        db.execSQL("drop table if exists " + TABLE_9);
+        db.execSQL("drop table if exists " + TABLE_10);
+        db.execSQL("drop table if exists " + TABLE_11);
+        db.execSQL("drop table if exists " + TABLE_12);
+        db.execSQL("drop table if exists " + TABLE_13);
+        db.execSQL("drop table if exists " + TABLE_14);
+        db.execSQL("drop table if exists " + TABLE_15);
         onCreate(db);
     }
 }
